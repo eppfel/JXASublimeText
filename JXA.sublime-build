@@ -1,9 +1,13 @@
 {
-    "shell_cmd": "osacompile -l JavaScript -o $file_base_name.scpt $file_base_name.js",
+    "shell_cmd": "osacompile -l JavaScript -o $file_base_name.scpt $file_name",
     "variants": [
         {
             "name": "Run",
-            "shell_cmd": "osascript -l JavaScript $file_base_name.js"
+            "shell_cmd": "osascript -l JavaScript $file_name"
+        },
+        {
+            "name": "Build App",
+            "shell_cmd": "osacompile -l JavaScript -o $file_base_name.app $file_name"
         }
     ]
 }
