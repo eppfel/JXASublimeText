@@ -9,7 +9,6 @@ The standard `Build` command creates an executable and in Apple Script Editor ed
 The `Run` command executes the script directly in ST.
 In the command palette are more variants to build:
 - `Build: App`: Build an executable application (.app)
-- `Build: App (execute only)`: Build an executable application (.app), which can not be read, nor edited.
 - `Build: Script Bundle`: Build an executable Script Bundle (.scptd)
 
 The Build System takes a vanilla JavaScript file and runs the shell command `osascript -l Javascript [file_name]` or `osacompile -l JavaScript -o [file_name].scpt [file_name]`. Look the `osacompile` manual for more options.
