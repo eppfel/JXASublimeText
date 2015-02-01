@@ -8,6 +8,10 @@
         {
             "name": "Build App",
             "shell_cmd": "osacompile -l JavaScript -o $file_base_name.app $file_name"
+        },
+        {
+            "name": "Build Script Bundle",
+            "shell_cmd": "osacompile -l JavaScript -o $file_base_name.scptd $file_name"
         }
     ]
 }
