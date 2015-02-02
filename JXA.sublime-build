@@ -1,17 +1,26 @@
 {
-    "shell_cmd": "osacompile -l JavaScript -o $file_base_name.scpt $file_name",
+    "cmd": ["echo", "Error: JXA Build System is only supported on MAC OSX"],
+    "osx" : {
+        "cmd": ["osacompile", "-l", "JavaScript", "-o", "$file_base_name.scpt", "$file_name"]
+    },
     "variants": [
         {
             "name": "Run",
-            "shell_cmd": "osascript -l JavaScript $file_name"
+            "osx" : {
+                "cmd": ["osascript", "-l", "JavaScript", "$file_name"]
+            }
         },
         {
             "name": "Build App",
-            "shell_cmd": "osacompile -l JavaScript -o $file_base_name.app $file_name"
+            "osx" : {
+                "cmd": ["osacompile", "-l", "JavaScript", "-o", "$file_base_name.app", "$file_name"]
+           }
         },
         {
             "name": "Build Script Bundle",
-            "shell_cmd": "osacompile -l JavaScript -o $file_base_name.scptd $file_name"
+            "osx" : {
+                "cmd": ["osacompile", "-l", "JavaScript", "-o", "$file_base_name.scptd", "$file_name"]
+            }
         }
     ]
 }
